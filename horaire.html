@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <title>03- gestion du menu et plus avec JavaScript</title>
+ 
+        <!-- Ajustement de la taille du viewport-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/horaire.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+ 
+    <body>
+        <header>
+        <!--Case à cocher-->
+        <input type="checkbox" id="cc-pour-bouton-burger" />
+        
+        <img src="" alt="">
+ 
+        <div class="barre-menu">
+            <!-- Bouton burger-->
+            <label for="cc-pour-bouton-burger" class="bouton-burger"></label>
+            <nav class="menu">
+                <a href="index.html">Mission</a>
+                <a href="instructeurs.html">Instructeurs</a>
+                <a href="cours.html">Cours</a>
+                <a href="#horaire">Horaire</a>
+                <a href="videos.html">Vidéos</a>
+                <a href="equipement.html">Équipement</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+</header>
+        <main class="contenu-horaire">
+            <section id="horaire">
+              <h2 class="titre-horaire">Horaire des cours</h2>
+              <h3 class="horaire-general">Heures d'ouverture : 8 heures à 21 heures <br> Entrainement libre en tout temps en-dehors des cours <br> <br>Semaine du 11 au 17 décembre</h3>
+              
+                <div class="contenu-evenement-cours">
+ 
+                  <div class="evenement">
+ 
+                    <div class="contenu-gauche">
+                      <div class="jour">Lundi</div>
+                    </div>
+ 
+                    <div class="contenu-droite">
+ 
+                      <h3 class="nom-cours">Jiu-Jitsu</h3>
+ 
+                      <div class="description">Enfants <br> Instructrice : Louise</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 8:00 - 11:00
+                      </div>
+ 
+                      <h3 class="nom-cours">Taekwondo</h3>
+                      
+                      <div class="description">Enfants <br> Instructeur : Maxime</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 12:00 - 14:00
+                      </div>
+                    </div>
+                  </div>
+ 
+                  <div class="evenement">
+ 
+                    <div class="contenu-gauche">
+                      <div class="jour">Mardi</div>
+                    </div>
+ 
+                    <div class="contenu-droite">
+ 
+                      <h3 class="nom-cours">Muay Thai</h3>
+ 
+                      <div class="description">Adolescents <br> Instructeur : Vincent</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 10:00 - 13:00
+                      </div>
+ 
+                      <h3 class="nom-cours">Jiu-Jitsu</h3>
+                      
+                      <div class="description">Adolescents <br> Instructrice : Louise</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 14:00 - 17:00
+                      </div>
+                    </div>
+                  </div>
+ 
+                  <div class="evenement">
+ 
+                    <div class="contenu-gauche">
+                      <div class="jour">Mercredi</div>
+                    </div>
+ 
+                    <div class="contenu-droite">
+ 
+                      <h3 class="nom-cours">Éveil aux arts martiaux</h3>
+ 
+                      <div class="description">Enfants <br> Instructeur : Vincent</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 10:00 - 10:45
+                      </div>
+ 
+                      <h3 class="nom-cours">Kung fu</h3>
+                      
+                      <div class="description">Adultes <br> Instructeur : Maxime</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 17:00 - 19:30
+                      </div>
+                    </div>
+                  </div>
+ 
+                  <div class="evenement">
+ 
+                    <div class="contenu-gauche">
+                      <div class="jour">Jeudi</div>
+                    </div>
+ 
+                    <div class="contenu-droite">
+ 
+                      
+                      <h3 class="nom-cours">Karaté</h3>
+                      
+                      <div class="description">Adolescents <br> Instructrice : Louise</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 17:00 - 19:00
+                      </div>
+ 
+                      <h3 class="nom-cours">Muay Thai</h3>
+                      
+                      <div class="description">Adultes <br> Instructeur : Vincent</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 19:00 - 21:00
+                      </div>
+                    </div>
+                  </div>
+ 
+                  <div class="evenement">
+ 
+                    <div class="contenu-gauche">
+                      <div class="jour">Vendredi</div>
+                    </div>
+ 
+                    <div class="contenu-droite">
+ 
+                      <h3 class="nom-cours">Muay Thai</h3>
+ 
+                      <div class="description">Enfants <br> Instructeur : Vincent</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 8:00 - 11:00
+                      </div>
+ 
+                      <h3 class="nom-cours">Taekwondo</h3>
+                      
+                      <div class="description">Adultes <br> Instructeur : Maxime</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 15:00 - 17:30
+                      </div>
+                    </div>
+                  </div>
+ 
+                  <div class="evenement">
+ 
+                    <div class="contenu-gauche">
+                      <div class="jour">Samedi</div>
+                    </div>
+ 
+                    <div class="contenu-droite">
+ 
+                      <h3 class="nom-cours">Éveil aux arts martiaux</h3>
+ 
+                      <div class="description">Enfants <br> Instructeur : Vincent</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 8:00 - 9:30
+                      </div>
+ 
+                      <h3 class="nom-cours">Capoeira</h3>
+                      
+                      <div class="description">Enfants <br> Instructeur : Maxime</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 10:00 - 12:00
+                      </div>
+                    </div>
+                  </div>
+ 
+                  <div class="evenement">
+ 
+                    <div class="contenu-gauche">
+                      <div class="jour">Dimanche</div>
+                    </div>
+ 
+                    <div class="contenu-droite">
+ 
+                      <h3 class="nom-cours">Karaté</h3>
+ 
+                      <div class="description">Enfants <br> Instructeur : Maxime</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 10:00 - 12:30
+                      </div>
+ 
+                      <h3 class="nom-cours"> Aikido</h3>
+                      
+                      <div class="description">Adultes <br> Instructeur : Louise</div>
+ 
+                      <div class="heure-cours">
+                        <img src="images/temps.png" alt="Logo horloge"> 13:00 - 21:00
+                      </div>
+                    </div>
+                  </div>
+ 
+                </div>
+            </section>
+        </main>
+ 
+        <footer>
+            <section id= #pied2page>
+                <div class="colonne">
+            <dl>
+              <dd><a href="#">Foire aux questions</a></dd>
+              <dd><a href="#">Politiques de confidentialité</a></dd>
+              <dd><a href="#">Conditions de ventes</a></dd>
+            </dl>
+            <dl>
+              <dd><a href="#">Téléphone : (514) 862-2769 </a></dd>
+              <dd><a href="#">Courriel :  info@crowtrainingcenter.com</a></dd>
+              <dd><a href="#">Politiques</a></dd>
+            </dl>
+            <dl>
+              <dd><a href="#">Adresse</a></dd>
+              <dd><a href="#">Politiques</a></dd>
+              <dd><a href="#">Politiques</a></dd>
+            </dl>
+                </div>
+              </section>
+              </footer>
+        <script src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,177 @@
+/* Importe le fichier CSS principal */
+@import url(root.css);
+
+/* Réinitialise les marges, le padding et le comportement de défilement */
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+/**************************************************************************** ZONE DU BODY ***********************************************************/
+
+/* Style de base pour le corps de la page */
+body {
+    font-family: var(--police-principal);
+    margin: 0;
+    padding: 0;
+}
+
+/**************************************************************************** ZONE DU HEADER ***********************************************************/
+
+/* Style pour l'en-tête de la page */
+.header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Style pour le titre principal dans l'en-tête */
+.header h1 {
+    margin-bottom: 20px;
+    font-family: var(--police-titre);
+}
+
+/**************************************************************************** ZONE DE LA FLÈCHE ***********************************************************/
+
+/* Style pour le bouton de retour en arrière */
+.arrow-back {
+    /* On le met en position absolute avec ces coordonnées */
+    position: absolute;
+    top: 120px;
+    left: 20px;
+    /* Caractéristiques des couleurs */
+    color: var(--couleur-blanche);
+    background-color: var(--couleur-arriere-plan-fleche);
+    /* Caractéristiques du texte */
+    font-size: 18px;
+    text-decoration: none;
+    /* Padding */
+    padding: 10px;
+    /* Border-radius */
+    border-radius: 5px;
+    /* Transition */
+    transition: background-color 0.3s ease;
+}
+
+/* Style au survol du bouton de retour en arrière */
+.arrow-back:hover {
+    background-color: var(--couleur-arriere-plan-fleche-foncee);
+}
+
+/**************************************************************************** ZONE DES COURS ***********************************************************/
+
+/* Style pour le conteneur des informations sur le cours */
+.course-container {
+    /* On le met en displat flex, avec un space-between et un centrement des items */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Padding et margin */
+    padding: 20px;
+    margin: 0 30px;
+}
+
+/* Style pour l'image du cours */
+.course-image {
+    width: 45%;
+}
+
+/* Style pour la description du cours */
+.course-description {
+    width: 45%;
+    text-align: center;
+}
+
+/* Style pour les boutons d'action dans la description */
+.description-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+
+/**************************************************************************** ZONE INSCRIPTION AU COURS ***********************************************************/
+
+/* Style pour les boutons d'inscription et de consultation des horaires */
+.inscription-btn,
+.voir-horaire-btn {
+    /* display en inline-block */
+    display: inline-block;
+    /* Border-radius */
+    border-radius: 5px;
+    /* décoration texte = aucune */
+    text-decoration: none;
+    /* padding et margin */
+    margin: 0 10px;
+    padding: 10px 20px;
+    /* transition */
+    transition: background-color 0.3s ease;
+}
+
+/* Style pour le bouton d'inscription */
+.inscription-btn {
+    background-color: var(--couleur-arriere-plan-fleche);
+    color: var(--couleur-blanche);
+}
+
+/**************************************************************************** ZONE VOIR L'HORAIRE ***********************************************************/
+
+/* Style pour le bouton de consultation des horaires */
+.voir-horaire-btn {
+    background-color: var(--couleur-arriere-plan-fleche-foncee);
+    color: var(--couleur-blanche);
+}
+
+/* Style au survol des boutons d'action */
+.inscription-btn:hover,
+.voir-horaire-btn:hover {
+    background-color: var(--couleur-arriere-plan-fleche-encore-plus-foncee);
+}
+
+/* Media query pour les écrans de taille maximale de 768 pixels */
+@media screen and (max-width: 768px) {
+    /* Ajustements de style pour le bouton de retour en arrière */
+    .arrow-back {
+        font-size: 16px;
+        top: 90px;
+        left: 10px;
+    }
+
+    /* Ajustements de style pour le conteneur du cours */
+    .course-container {
+        padding: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    /* Ajustements de style pour l'image du cours */
+    .course-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    /* Ajustements de style pour la description du cours */
+    .course-description {
+        width: 100%;
+    }
+
+    /* Ajustements de style pour le pied de page */
+    #pied2page {
+        padding: 10px;
+    }
+
+    /* Ajustements de style pour les boutons d'action dans la description */
+    .description-buttons {
+        justify-content: center;
+    }
+
+    /* Ajustements de style pour les boutons d'inscription et de consultation des horaires */
+    .inscription-btn,
+    .voir-horaire-btn {
+        display: block;
+        margin: 20px auto;
+    }
+}

@@ -1,0 +1,175 @@
+/* Import de la feuille de style root.css */
+@import url(root.css);
+
+/* Réinitialisation des marges, des rembourrages, du comportement de défilement et de la boîte */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* Styles du header */
+.barre-menu, .menu {
+  background: #8a0303; /* Couleur du header */
+  color: white;
+  z-index: 1;
+}
+
+/* Styles des liens dans la barre de navigation */
+nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.2rem;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ddd;
+  text-align: center;
+}
+
+/* Styles des titres de niveau 1 et 3 avec un espacement de padding */
+h1, h3 {
+  padding: 0 0.5rem;
+}
+
+/* Styles de la barre de menu (fixée en haut de la page) */
+.barre-menu {
+  width: 100%;
+  height: 10vh;
+  border-bottom: 2px solid #ddd;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Styles du menu (fixé en haut après la barre de menu) */
+.menu {
+  width: 100%;
+  position: fixed;
+  top: 10vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/* Styles des liens dans le menu avec une transition de translation */
+.menu a {
+  transform: translateX(-100%);
+  transition: transform 400ms;
+  margin-top: 30px;
+}
+
+/* Styles alternatifs pour les liens pairs dans le menu */
+.menu a:nth-child(even) {
+  transform: translateX(100%);
+}
+
+/* Styles du bouton burger */
+.bouton-burger {
+  display: block;
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem;
+  background: linear-gradient(
+    to bottom,
+    #ddd 0%,
+    #ddd 20%,
+    transparent 20%,
+    transparent 40%,
+    #ddd 40%,
+    #ddd 60%,
+    transparent 60%,
+    transparent 80%,
+    #ddd 80%,
+    #ddd 100%
+  );
+  cursor: pointer;
+  transition: transform 400ms;
+}
+
+/* Styles du bouton burger lorsqu'il est coché (visible uniquement en mode mobile) */
+#cc-pour-bouton-burger:checked ~ .barre-menu > .bouton-burger {
+  transform: rotate(90deg);
+}
+
+/* Styles du menu lorsqu'il est déployé (visible uniquement en mode mobile) */
+#cc-pour-bouton-burger:checked ~ .barre-menu > .menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Styles des liens dans le menu lorsqu'il est déployé (visible uniquement en mode mobile) */
+#cc-pour-bouton-burger:checked ~ .barre-menu > .menu a {
+  transform: translateX(0%);
+}
+
+/* Styles des délais de transition pour chaque lien dans le menu (visible uniquement en mode mobile) */
+#cc-pour-bouton-burger:checked ~ .barre-menu > .menu a:nth-child(1) {
+  transition-delay: 0.5s;
+}
+
+#cc-pour-bouton-burger:checked ~ .barre-menu > .menu a:nth-child(2) {
+  transition-delay: 1s;
+}
+
+#cc-pour-bouton-burger:checked ~ .barre-menu > .menu a:nth-child(3) {
+  transition-delay: 1.5s;
+}
+
+#cc-pour-bouton-burger:checked ~ .barre-menu > .menu a:nth-child(4) {
+  transition-delay: 2s;
+}
+
+#cc-pour-bouton-burger:checked ~ .barre-menu > .menu a:nth-child(5) {
+  transition-delay: 2.5s;
+}
+
+#cc-pour-bouton-burger:checked ~ .barre-menu > .menu a:nth-child(6) {
+  transition-delay: 3s;
+}
+
+#cc-pour-bouton-burger:checked ~ .barre-menu > .menu a:nth-child(7) {
+  transition-delay: 3.5s;
+}
+
+/* Masquage de la checkbox du bouton burger (visible uniquement en mode mobile) */
+#cc-pour-bouton-burger {
+  display: none;
+}
+
+/* Media queries pour les écrans d'une largeur minimale de 768px (mode desktop) */
+@media screen and (min-width: 768px) {
+  /* Ajustement des styles du menu en mode desktop */
+  .menu {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    transform: translateX(0%);
+    justify-content: space-evenly;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Ajustement des styles des liens dans le menu en mode desktop */
+  .menu a, .menu a:nth-child(even) {
+    flex-grow: 1;
+    transform: translateX(0%);
+  }
+
+  /* Ajustement des styles de la barre de menu en mode desktop */
+  .barre-menu {
+    border: none;
+    align-items: flex-end;
+  }
+
+  /* Masquage du bouton burger en mode desktop */
+  .bouton-burger {
+    display: none;
+  }
+}

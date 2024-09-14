@@ -1,0 +1,135 @@
+main.contenu-horaire{
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+#horaire{
+  width: 100%;
+height: auto;
+box-sizing: border-box;
+}
+ 
+#horaire .titre-horaire{
+  font-size: 1.8rem;
+}
+ 
+#horaire .horaire-general{
+  font-size: 0.8rem;
+}
+ 
+#horaire .titre-horaire, #horaire .horaire-general{
+text-align: center;
+padding-top: 20px;
+}
+ 
+ 
+.contenu-evenement-cours{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+ 
+.contenu-evenement-cours .evenement{
+/* box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4); */
+box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+display: flex;
+border-radius: 8px;
+margin: 32px 0;
+}
+ 
+.evenement .contenu-gauche{
+background: #8a0303;
+max-width: 120px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+padding: 8px 48px;
+font-weight: bold;
+border-radius: 8px 0 0 8px;
+}
+ 
+.evenement .contenu-gauche .jour{
+  font-size: 1.2rem;
+}
+ 
+.evenement .contenu-droite{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 0 24px;
+  min-width: 73%;
+  border-radius: 0 8px 8px 0px;
+  background-color: #f85252;
+}
+ 
+.evenement .contenu-droite .nom-cours{
+  font-size: 1.4rem;
+  margin: 24px 0 10px 0;
+  padding: 0;
+  color: #8a0303;
+  text-transform: uppercase;
+}
+ 
+.evenement .contenu-droite .description{
+  color: white;
+}
+ 
+.evenement .contenu-droite .heure-cours{
+  background: #fff8ba;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  padding: 8px 0.5px;
+  border-radius: 16px;
+  margin: 24px 0;
+  font-size: 0.9rem;
+}
+ 
+.evenement .contenu-droite .heure-cours img{
+  height: 20px;
+  padding-right: 8px;
+}
+ 
+@media screen and (min-width: 768px) {
+ 
+  #horaire .titre-horaire{
+    font-size: 2.5rem;
+  }
+  
+  #horaire .horaire-general{
+    font-size: 1.3rem;
+  }
+ 
+  .contenu-evenement-cours{
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+ 
+  .contenu-evenement-cours .evenement{
+    flex-direction: column;
+    min-width: 400px;
+  }
+ 
+  .evenement .contenu-gauche{
+    min-width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+ 
+  .evenement .contenu-droite{
+    min-width: 100%;
+    min-height: 20%;
+    border-radius: 0 0 8px 8px;
+  }
+ 
+  .evenement .contenu-droite .heure-cours{
+    width: 200px;
+    font-size: 1.2rem;
+  }
+}

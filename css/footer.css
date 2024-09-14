@@ -1,0 +1,53 @@
+/* Import de la feuille de style root.css */
+@import url(root.css);
+
+/* Réinitialisation des marges, des rembourrages, du comportement de défilement et de la boîte */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* Styles du footer */
+footer {
+  background-color: black; /* Couleur de fond du footer */
+  min-height: 20vh;
+}
+
+/* Styles des colonnes dans le footer */
+footer .colonne {
+  display: flex;
+  flex-direction: column;
+  line-height: 40px;
+  text-align: center;
+  justify-content: space-around;
+}
+
+/* Styles spécifiques à la première section dans le footer */
+section:nth-child(1) {
+  min-width: 10vh;
+}
+
+/* Styles des paragraphes dans le footer */
+footer p {
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+}
+
+/* Styles des liens dans les colonnes du footer */
+footer .colonne dl dd a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Media queries pour les écrans d'une largeur minimale de 768px */
+@media screen and (min-width: 768px) {
+  /* Ajustement des styles des colonnes dans le footer pour un agencement en ligne avec un espacement égal */
+  footer .colonne {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 20px;
+  }
+}

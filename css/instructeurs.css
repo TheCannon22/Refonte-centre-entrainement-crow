@@ -1,0 +1,165 @@
+/* Importation de la feuille de style root.css */
+@import url(root.css);
+ 
+/* Styles pour le corps du document */
+body {
+  background-color: var(--couleur-arriere-plan);
+}
+ 
+/* Styles pour les titres h1 dans le corps du document */
+body h1 {
+  text-align: center;
+}
+ 
+/* Styles pour la section principale du contenu des instructeurs */
+main.contenu-instructeurs {
+  min-height: 100vh;
+  background-color: var(--couleur-arriere-plan);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+ 
+/* Styles pour les conteneurs d'instructeurs */
+.conteneur {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 100px 50px;
+}
+ 
+/* Styles pour les cartes d'instructeurs */
+.conteneur .carte {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  width: 200px;
+  height: 280px;
+  background-color: #be2121;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: 0.5s;
+}
+ 
+/* Styles pour l'effet de survol des cartes d'instructeurs */
+.conteneur .carte:hover {
+  height: 370px;
+}
+ 
+/* Styles pour les images dans les cartes d'instructeurs */
+.conteneur .carte .image-contenu {
+  position: absolute;
+  top: 20px;
+  width: 160px;
+  height: 180px;
+  background-color: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+ 
+/* Styles pour l'effet de survol des images dans les cartes d'instructeurs */
+.conteneur .carte:hover .image-contenu {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+ 
+/* Styles pour les images dans les cartes d'instructeurs */
+.conteneur .carte .image-contenu img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+}
+ 
+/* Styles pour les contenus des cartes d'instructeurs */
+.conteneur .carte .contenu {
+  position: absolute;
+  top: 220px;
+  width: 100%;
+  height: 25px;
+  padding: 0 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+ 
+/* Styles pour l'effet de survol des contenus des cartes d'instructeurs */
+.conteneur .carte:hover .contenu {
+  top: 70px;
+  height: 300px;
+}
+ 
+/* Styles pour les titres h2 dans les contenus des cartes d'instructeurs */
+.conteneur .carte .contenu h2 {
+  color: var(--couleur-blanche);
+}
+ 
+/* Styles pour les sous-titres h3 dans les contenus des cartes d'instructeurs */
+.conteneur .carte .contenu h3 {
+  font-size: 0.8rem;
+  color: var(--couleur-blanche);
+}
+ 
+/* Styles pour les paragraphes dans les contenus des cartes d'instructeurs */
+.conteneur .carte .contenu p {
+  font-size: 0.75rem;
+  text-align: center;
+  color: var(--couleur-blanche);
+}
+ 
+/* Media queries pour les écrans de taille supérieure à 768px */
+@media screen and (min-width: 768px) {
+  /* Ajustements spécifiques pour les cartes d'instructeurs */
+  .conteneur .carte {
+    width: 400px;
+    height: 470px;
+  }
+ 
+  /* Ajustements spécifiques pour l'effet de survol des cartes d'instructeurs */
+  .conteneur .carte:hover {
+    height: 510px;
+  }
+ 
+  /* Ajustements spécifiques pour les images dans les cartes d'instructeurs */
+  .conteneur .carte .image-contenu {
+    width: 350px;
+    height: 400px;
+  }
+ 
+  /* Ajustements spécifiques pour l'effet de survol des images dans les cartes d'instructeurs */
+  .conteneur .carte:hover .image-contenu {
+    top: -150px;
+  }
+ 
+  /* Ajustements spécifiques pour les contenus des cartes d'instructeurs */
+  .conteneur .carte .contenu {
+    top: 430px;
+    height: 27px;
+  }
+ 
+  /* Ajustements spécifiques pour l'effet de survol des contenus des cartes d'instructeurs */
+  .conteneur .carte:hover .contenu {
+    top: 220px;
+    height: 300px;
+  }
+ 
+  /* Ajustements spécifiques pour les sous-titres h3 dans les contenus des cartes d'instructeurs */
+  .conteneur .carte .contenu h3 {
+    font-size: 1rem;
+  }
+ 
+  /* Ajustements spécifiques pour les paragraphes dans les contenus des cartes d'instructeurs */
+  .conteneur .carte .contenu p {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Méta-informations du document -->
+    <meta charset="utf-8" />
+    <title>03- gestion du menu et plus avec JavaScript</title>
+
+    <!-- Ajustement de la taille du viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Liens vers les feuilles de style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/equipement.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <!-- En-tête du document -->
+    <header>
+        <!-- Case à cocher pour le bouton burger -->
+        <input type="checkbox" id="cc-pour-bouton-burger" />
+
+        <!-- Barre du menu -->
+        <div class="barre-menu">
+            <!-- Bouton burger -->
+            <label for="cc-pour-bouton-burger" class="bouton-burger"></label>
+            <!-- Navigation du site -->
+            <nav class="menu">
+                <a href="index.html">Mission</a>
+                <a href="instructeurs.html">Instructeurs</a>
+                <a href="cours.html">Cours</a>
+                <a href="horaire.html">Horaire</a>
+                <a href="videos.html">Vidéos</a>
+                <a href="#equipement">Équipement</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Titre principal -->
+    <h1>Notre équipement</h1>
+
+    <!-- Galerie des produits -->
+    <div class="galerie">
+        <!-- Contenu du produit 1 -->
+        <div class="contenu-produits">
+            <!-- Image du produit -->
+            <img src="images/pexels-inna-mykytas-6455240.jpg" alt="Ceci est le jupon">
+            <!-- Titre du produit -->
+            <h3>Jupon</h3>
+            <!-- Description du produit -->
+            <p>Transformez votre pratique des arts martiaux avec notre jupon traditionnel, une fusion parfaite de style et de fonctionnalité. Conçu avec précision pour les passionnés d'arts martiaux, ce jupon offre une liberté de mouvement exceptionnelle tout en ajoutant une touche d'élégance à votre tenue.</p>
+            <!-- Prix du produit -->
+            <h6>100.00$</h6>
+            <!-- Évaluation du produit -->
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <!-- Bouton d'achat -->
+            <button class="button-1 bouton-animation">Achetez maintenant!</button>
+        </div>
+
+        <!-- Contenu du produit 2 -->
+        <div class="contenu-produits">
+            <!-- Image du produit -->
+            <img src="images/pexels-inna-mykytas-6455241.jpg" alt="Ceci sont les gangs en boxe">
+            <!-- Titre du produit -->
+            <h3>Gants de boxe</h3>
+            <!-- Description du produit -->
+            <p>Affrontez chaque combat avec confiance en portant nos gants de boxe de performance, conçus pour offrir une combinaison optimale de puissance, de protection et de style. Ces gants vous propulsent au-delà de l'ordinaire, que vous soyez un débutant passionné ou un professionnel chevronné.</p>
+            <!-- Prix du produit -->
+            <h6>40.00$</h6>
+            <!-- Évaluation du produit -->
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <!-- Bouton d'achat -->
+            <button class="button-2 bouton-animation">Achetez maintenant!</button>
+        </div>
+
+        <!-- Contenu du produit 3 -->
+        <div class="contenu-produits">
+            <!-- Image du produit -->
+            <img src="images/pexels-inna-mykytas-6455246.jpg" alt="Ceci est le Gui en karaté">
+            <!-- Titre du produit -->
+            <h3>Gui - Karaté</h3>
+            <!-- Description du produit -->
+            <p>Plongez dans l'art du judo avec le "judogi", l'uniforme emblématique qui incarne l'esprit et la tradition de cette discipline millénaire. Chaque détail du judogi est conçu pour refléter la philosophie du judo, mêlant élégance et fonctionnalité sur le tatami.</p>
+            <!-- Prix du produit -->
+            <h6>70.00$</h6>
+            <!-- Évaluation du produit -->
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <!-- Bouton d'achat -->
+            <button class="button-3 bouton-animation">Achetez maintenant!</button>
+        </div>
+
+        <!-- Contenu du produit 4 -->
+        <div class="contenu-produits">
+            <!-- Image du produit -->
+            <img src="images/pexels-jeferson-santos-19132423.jpg" alt="Ceci est le costume Ninja qu'on vend">
+            <!-- Titre du produit -->
+            <h3>Habit - Ninja</h3>
+            <!-- Description du produit -->
+            <p>Dominez l'art de l'infiltration avec notre ensemble d'équipement de ninja blanc, une fusion parfaite de style et de fonctionnalité. Conçu pour les guerriers modernes, cet équipement offre une performance inégalée avec des matériaux de haute qualité, permettant une liberté de mouvement optimale.</p>
+            <!-- Prix du produit -->
+            <h6>1000.00$</h6>
+            <!-- Évaluation du produit -->
+            <ul>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star checked"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <!-- Bouton d'achat -->
+            <button class="button-4 bouton-animation">Achetez maintenant!</button>
+        </div>
+
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <section id="pied2page">
+            <div class="colonne">
+                <!-- Liens de la colonne 1 -->
+                <dl>
+                    <dd><a href="#">Foire aux questions</a></dd>
+                    <dd><a href="#">Politiques de confidentialité</a></dd>
+                    <dd><a href="#">Conditions de ventes</a></dd>
+                </dl>
+                <!-- Liens de la colonne 2 -->
+                <dl>
+                    <dd><a href="#">Téléphone : (514) 862-2769 </a></dd>
+                    <dd><a href="#">Courriel :  info@crowtrainingcenter.com</a></dd>
+                    <dd><a href="#">Politiques</a></dd>
+                </dl>
+                <!-- Liens de la colonne 3 -->
+                <dl>
+                    <dd><a href="#">Adresse</a></dd>
+                    <dd><a href="#">Politiques</a></dd>
+                    <dd><a href="#">Politiques</a></dd>
+                </dl>
+            </div>
+        </section>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

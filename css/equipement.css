@@ -1,0 +1,224 @@
+/* Import de la feuille de style root.css */
+@import url(root.css);
+
+/* Réinitialisation des marges, du padding, du comportement de défilement et de la boîte */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/************************************************************************** ZONE DU BODY **************************************************************************/
+
+/* Style du corps de la page avec une marge, l'arrière-plan et une police définie */
+body {
+  margin: 0;
+  background-color: var(--couleur-arriere-plan);
+  font-family: var(--police-principal);
+}
+
+/************************************************************************** ZONE DU HEADER **************************************************************************/
+
+/* Style de l'en-tête avec une hauteur définie */
+header {
+  height: 12vh;
+}
+
+/* Style des liens avec une suppression de la décoration par défaut */
+a {
+  text-decoration: none;
+}
+
+/************************************************************************** ZONE DES TITRES DE H1 À H6 **************************************************************************/
+
+/* Style des titres h1 avec une police */
+h1 {
+  font-family: var(--police-titre);
+}
+
+/* Style des titres h3 avec une grandeur de texte, un margin et un padding-top */
+h3 {
+  font-size: 30px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+/* Style des titres h6 avec une taille de police, une couleur et une marge */
+h6 {
+  font-size: 26px;
+  color: var(--couleur-du-texte);
+  margin: 0;
+}
+
+/* Style des titres h1,h3 et h6 qui ont un lien */
+h1,h3,h6{
+  text-align: center;
+}
+
+/************************************************************************** ZONE DE LA GALERIE AVEC LES PRODUITS **************************************************************************/
+
+
+/* Style de la galerie */
+.galerie {
+  /* On met un display flex, on centre le tout parfaitement et on ajoute un flex-wrap*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* Dimension de celle-ci */
+  width: 100%;
+  /* Le margin et le padding */
+  margin: 50px 0;
+  padding: 20px;
+}
+
+/* Style des contenus des produits */
+.contenu-produits {
+  /* La couleur avec un box-shadow */
+  background: var(--couleur-arriere-plan-produits);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  /* la largeur de la page */
+  width: 20%;
+  /* Le padding et le margin */
+  margin: 15px;  
+  padding-top: 10px;
+  /* On met un box-sizing */
+  box-sizing: border-box;
+  /* On met un float à gauche de la page */
+  float: left;
+  /* Le texte est centré */
+  text-align: center;
+  /* Caractéristiques de la bulle */
+  border-radius: 20px;
+  /* Durée de la transition */
+  transition: .4s;
+  cursor: pointer;
+}
+
+/* Effets de survol sur les contenus des produits */
+.contenu-produits:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translate(0px, -8px);
+}
+
+/* Style des images des produits*/
+img {
+  /* Dimension de l'image */
+  width: 200px;
+  height: 250px;
+  /* On aligne le texte au centre */
+  text-align: center;
+  /* On met un margin pour centré */
+  margin: 0 auto;
+  /* On met l'image en cover */
+  object-fit: cover;
+}
+
+/* Style des paragraphes avec un texte centré, une couleur et un padding */
+p {
+  text-align: center;
+  color: var(--couleur-du-texte);
+  padding: 0 8px;
+}
+
+/************************************************************************** ZONE DES ÉTOILES **************************************************************************/
+
+/* Style de la liste  */
+ul {
+  /* On le met en display flex et on le centre partout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* On ne met pas de style sur les listes */
+  list-style: none;
+  /* On met un padding */
+  padding: 0;
+}
+
+/* Style des éléments de liste avec un rembourrage */
+li {
+  padding: 5px;
+}
+
+/* Style des icônes d'étoiles */
+.fa {
+  font-size: 26px;
+  transition: .4s;
+}
+
+/* Style de l'étoile cochée avec une couleur spécifiée */
+.checked {
+  color: var(--couleur-etoile-mode-checked);
+}
+
+/* Effet de survol sur les étoiles */
+.fa:hover {
+  transform: scale(1.3);
+  transition: .4s;
+}
+
+/* Style des boutons  */
+button {
+  /* Caractéristiques du texte */
+  text-align: center;
+  font-size: 24px;
+  /* Couleur utilisée */
+  color: var(--couleur-blanche);
+  /* Largeur du bouton */
+  width: 100%;
+  /* Padding et margin-top */
+  padding: 15px;
+  margin-top: 5px;
+  /* Caractéristiques des bordures */
+  border: 0;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  /* Aucun outline */
+  outline: none;
+  cursor: pointer;
+}
+
+/* Styles spécifiques aux différentes classes de boutons */
+.button-1, .button-2, .button-3, .button-4 {
+  background: var(--couleur-du-texte);
+}
+
+/* Style des boutons avec animation */
+.bouton-animation {
+  transition: transform 1s ease-in-out;
+}
+
+/* Animation lorsqu'il est cliqué */
+.bouton-animation:active {
+  animation: secousse 1s ease-in-out;
+}
+
+/* Animation de secousse */
+@keyframes secousse {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  20%, 60% {
+    transform: translateX(-10px);
+  }
+  40%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+/* Media queries pour les écrans d'une largeur maximale de 1000px */
+@media screen and (max-width:1000px) {
+  /* Ajustement de la largeur des contenus des produits */
+  .contenu-produits {
+    width: 45%;
+  }
+}
+
+/* Media queries pour les écrans d'une largeur maximale de 768px */
+@media screen and (max-width:768px) {
+  /* Ajustement de la largeur des contenus des produits à 100% */
+  .contenu-produits {
+    width: 100%;
+  }
+}

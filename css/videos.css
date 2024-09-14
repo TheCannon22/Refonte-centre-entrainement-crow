@@ -1,0 +1,176 @@
+/* Importe le fichier CSS principal */
+@import url(root.css);
+
+/* Réinitialise les marges, le padding, le comportement de défilement et la boîte de modèles */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/******************************************************************************** ZONE DU BODY *****************************************************************************/
+
+/* Style de base pour le corps de la page */
+body {
+  margin: 0;
+}
+
+/******************************************************************************** ZONE DU TITRE PRINCIPALE *****************************************************************************/
+
+/* Style pour le titre principal de la page */
+.titre-principale {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--couleur-du-texte);
+}
+
+/******************************************************************************** ZONE DES TITRES DE H1 À H6 *****************************************************************************/
+
+/* Style pour les titres h1 et h2 */
+h1, h2{
+  font-family: var(--police-titre);
+}
+
+/* Style pour les titres h2 */
+h2{
+  font-size: 17px;
+}
+
+/******************************************************************************** ZONE DES VIDÉOS *****************************************************************************/
+
+/* Style pour le conteneur des vidéos */
+.video-container {
+  /* On met le tout en display flex, on le centre et on le met en flex-wrap */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  /* Les margins et les paddings */
+  margin-top: 5vh;
+  padding: 20px;
+}
+
+/* Style pour les vidéos */
+.video {
+  width: 100%;
+  margin-bottom: 20px;
+  /* On le met en position relative */
+  position: relative;
+}
+
+/* Style pour les titres des vidéos */
+video h2 {
+  /* Margin-bottom */
+  margin-bottom: 10px;
+  /* Cractéristiques des polices */
+  font-size: 1.5rem;
+  color: var(--couleur-du-texte);
+  text-align: center;
+  font-family: var(--police-titre);
+}
+
+/* Style pour les vidéos en mode iframe */
+iframe {
+  width: 100%;
+  height: 200px;
+}
+
+
+/* Style pour les labels des boutons de contrôle de la description */
+label {
+  /* on les met en display inline-block */
+  display: inline-block;
+  /* Les caractéristiques des couleurs */
+  color: var(--couleur-blanche);
+  background-color: var(--couleur-header);
+  /* Le padding */
+  padding: 10px;
+  /* La bordure */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style pour la zone de description */
+.description {
+  /* Caractéristiques des couleurs */
+  background-color: var(--couleur-blanche);
+  color: var(--couleur-du-texte);
+  /* Margin et border-radius */
+  margin: 8px;
+  border-radius: 5px;
+  /* On le cache */
+  overflow: hidden;
+  /* Dimension de celle-ci */
+  max-height: 0px;
+  width: 100%; /* Prend la largeur complète */
+}
+
+/* Style pour le paragraphe à l'intérieur de la zone de description */
+.description p {
+  padding: 20px;
+}
+
+/* Style pour les boutons de contrôle de la description */
+#btn1,
+#btn2,
+#btn3 {
+  /* On les met à display:none */
+  display: none;
+}
+
+/* Style pour afficher la description lorsqu'un bouton est coché */
+#btn1:checked ~ .description,
+#btn2:checked ~ .description,
+#btn3:checked ~ .description {
+  max-height: 200px;
+  overflow: hidden;
+}
+
+/* Media query pour les écrans de taille minimale de 768 pixels */
+@media (min-width: 768px) {
+  /* Ajustements de style pour le titre principal en mode desktop */
+  .titre-principale {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Ajustements de style pour le conteneur des vidéos en mode desktop */
+  .video-container {
+    justify-content: space-around;
+    min-height: 80vh;
+  }
+
+  /* Ajustements de style pour les vidéos en mode desktop */
+  .video {
+    width: 30%;
+    margin-bottom: 0;
+  }
+
+  /* Ajustements de style pour les vidéos en mode iframe en mode desktop */
+  iframe {
+    height: 315px;
+  }
+
+  /* Ajustements de style pour la zone de description en mode desktop */
+  .description {
+    /* On le met en position absolute */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 0.8rem;
+    left: 48%;
+    transform: translateX(-50%);
+  }
+
+  /* Ajustements de style pour afficher la description en mode desktop */
+  #btn1:checked ~ .description,
+  #btn2:checked ~ .description,
+  #btn3:checked ~ .description {
+    max-height: 250px;
+    overflow: hidden;
+  }
+}

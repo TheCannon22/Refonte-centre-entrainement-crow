@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ajustement de la taille du viewport pour le rendu responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de Karaté</title>
+    <!-- Liens vers les fichiers CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/tous-les-cours.css">
+</head>
+<body>
+    <!-- Zone du header de la page -->
+    <header>
+        <!-- Case à cocher du bouton burger -->
+        <input type="checkbox" id="cc-pour-bouton-burger" />
+
+        <!-- La barre de navigation -->
+        <div class="barre-menu">
+            <!-- Bouton burger -->
+            <label for="cc-pour-bouton-burger" class="bouton-burger"></label>
+            <!-- Toutes les boutons de la barre de navigation -->
+            <nav class="menu">
+                <a href="index.html">Mission</a>
+                <a href="instructeurs.html">Instructeurs</a>
+                <a href="cours.html">Cours</a>
+                <a href="horaire.html">Horaire</a>
+                <a href="videos.html">Vidéos</a>
+                <a href="equipement.html">Équipement</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- En-tête de la page du cours -->
+    <div class="header">
+        <a href="cours.html" class="arrow-back">&larr; Retour</a>
+        <h1>Aikido</h1>
+    </div>
+
+    <!-- Contenu du cours -->
+    <section class="course-container">
+        <img src="images/Aikido.jpg" alt="Cours de Karaté" class="course-image">
+        <div class="course-description">
+            <p>
+                <!-- Description du cours d'Aikido -->
+                Rejoindre un cours d'aïkido peut être une expérience enrichissante pour ceux qui cherchent à développer leur confiance en eux, leur agilité physique, tout en apprenant des techniques de self-défense non agressives. C'est une opportunité unique d'explorer la beauté de la discipline martiale tout en promouvant la paix et l'harmonie.
+
+            </p>
+            <div class="description-buttons">
+                <a href="contact.html" class="inscription-btn">S'inscrire</a>
+                <a href="horaire.html" class="voir-horaire-btn">Voir l'horaire</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <section id="pied2page">
+            <div class="colonne">
+                <dl>
+                    <dd><a href="#">Foire aux questions</a></dd>
+                    <dd><a href="#">Politiques de confidentialité</a></dd>
+                    <dd><a href="#">Conditions de ventes</a></dd>
+                </dl>
+                <dl>
+                    <dd><a href="#">Téléphone : (514) 862-2769 </a></dd>
+                    <dd><a href="#">Courriel : info@crowtrainingcenter.com</a></dd>
+                    <dd><a href="#">Politiques</a></dd>
+                </dl>
+                <dl>
+                    <dd><a href="#">Adresse</a></dd>
+                    <dd><a href="#">Politiques</a></dd>
+                    <dd><a href="#">Politiques</a></dd>
+                </dl>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

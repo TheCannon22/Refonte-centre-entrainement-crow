@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Métadonnées du document -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de Karaté</title>
+
+    <!-- Liens vers les feuilles de style -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/tous-les-cours.css">
+</head>
+<body>
+    <header>
+        <!-- Case à cocher pour le bouton burger -->
+        <input type="checkbox" id="cc-pour-bouton-burger" />
+
+        <!-- Barre de menu avec le bouton burger et la navigation -->
+        <div class="barre-menu">
+            <!-- Bouton burger lié à la case à cocher -->
+            <label for="cc-pour-bouton-burger" class="bouton-burger"></label>
+            <!-- Navigation -->
+            <nav class="menu">
+                <a href="index.html">Mission</a>
+                <a href="instructeurs.html">Instructeurs</a>
+                <a href="#cours">Cours</a>
+                <a href="horaire.html">Horaire</a>
+                <a href="videos.html">Vidéos</a>
+                <a href="equipement.html">Équipement</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Section de l'en-tête avec flèche de retour et titre du cours -->
+    <div class="header">
+        <a href="cours.html" class="arrow-back">&larr; Retour</a>
+        <h1>Capoeira</h1>
+    </div>
+
+    <!-- Section principale du contenu avec l'image du cours et la description -->
+    <section class="course-container">
+        <img src="images/Capoeira.jpg" alt="Cours de Capoeira" class="course-image">
+        <div class="course-description">
+            <!-- Description du cours -->
+            <p>
+                Bienvenue dans notre cours de capoeira. Explorez la magie rythmique et la grâce acrobatique de la capoeira dans notre cours dynamique. Sous la direction de nos instructeurs passionnés, vous plongerez dans cet art martial brésilien unique, mêlant danse, musique et mouvements acrobatiques. La capoeira offre bien plus qu'un simple entraînement physique – elle célèbre la culture, la camaraderie et l'expression individuelle. Joignez-vous à notre cours pour développer agilité, flexibilité, et découvrir l'énergie positive qui émane de cette discipline envoûtante. Que vous soyez débutant ou initié, la capoeira vous offre une aventure corporelle et culturelle captivante.
+            </p>
+            <!-- Boutons de la description -->
+            <div class="description-buttons">
+                <a href="contact.html" class="inscription-btn">S'inscrire</a>
+                <a href="horaire.html" class="voir-horaire-btn">Voir l'horaire</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <section id="pied2page">
+            <!-- Colonnes dans le pied de page -->
+            <div class="colonne">
+                <!-- Liste avec des liens -->
+                <dl>
+                    <dd><a href="#">Foire aux questions</a></dd>
+                    <dd><a href="#">Politiques de confidentialité</a></dd>
+                    <dd><a href="#">Conditions de ventes</a></dd>
+                </dl>
+                <!-- Liste avec des informations de contact -->
+                <dl>
+                    <dd><a href="#">Téléphone : (514) 862-2769 </a></dd>
+                    <dd><a href="#">Courriel : info@crowtrainingcenter.com</a></dd>
+                    <dd><a href="#">Politiques</a></dd>
+                </dl>
+                <!-- Liste avec une adresse (à remplir) -->
+                <dl>
+                    <dd><a href="#">Adresse</a></dd>
+                    <dd><a href="#">Politiques</a></dd>
+                    <dd><a href="#">Politiques</a></dd>
+                </dl>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

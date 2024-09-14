@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Centre Crow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+    <!-- Liens vers les feuilles de style -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+  </head>
+ 
+  <body>
+    <header>
+      <!-- Case à cocher pour le bouton burger -->
+      <input type="checkbox" id="cc-pour-bouton-burger" />
+ 
+      <!-- Image du logo -->
+      <img src="" alt="" />
+ 
+      <!-- Barre du menu -->
+      <div class="barre-menu">
+        <!-- Bouton burger lié à la case à cocher -->
+        <label for="cc-pour-bouton-burger" class="bouton-burger"></label>
+        <!-- Navigation du menu -->
+        <nav class="menu">
+          <a href="#section1">Mission</a>
+          <a href="instructeurs.html">Instructeurs</a>
+          <a href="cours.html">Cours</a>
+          <a href="horaire.html">Horaire</a>
+          <a href="videos.html">Vidéos</a>
+          <a href="equipement.html">Équipement</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+ 
+    <!-- Section principale du contenu -->
+    <main class="contenu">
+      <!-- Section 1 avec une vidéo d'introduction -->
+      <section id="section1">
+        <video
+          autoplay
+          loop
+          muted
+          id="videoIntro"
+          src="videos/video-combat_3_1.mp4"
+        ></video>
+      </section>
+ 
+      <!-- Section 2 avec une image et du texte (mission) -->
+      <section id="section2">
+        <aside><img src="images/perso-combat-bleu.png" alt="" /></aside>
+        <div id="mission">
+          <h2>Notre mission</h2>
+          <p>
+            Novices curieux à experts novateurs en passant par des enfants en
+            soif de confiance et d’aventure ? Le centre d’entrainement Crow vous
+            offre un lieu où les rencontres de toutes les générations sont le
+            bienvenus. Nos programmes sont personnalisés aussi bien pour les
+            débutants que les experts.
+          </p>
+          <p>
+            Nous offrons entre autres des cours de
+            <b>Muay Thai, de Judo, de Jiu-Jitsu et de Karaté </b>, mais
+            également des salles réservés pour des entraînements individuels et
+            des introductions aux arts martiaux.
+          </p>
+          <p>
+            Nos instructeurs sont parmi les plus <b>expérimentés</b> et des plus
+            qualifiés au pays. Ils sont fiers d’offrir un suivi étroit à chaque
+            participant afin de mieux suivre leur développement. Que vous soyez
+            un combattant du week-end, un athlète professionnel ou une personne
+            à la recherche d’un programme de mise en forme, le centre
+            d’entraînement Crow offre une expérience <b>unique</b> pour les
+            athlètes de tous les niveaux qui veulent atteindre leur plein
+            potentiel en arts martiaux.
+          </p>
+        </div>
+      </section>
+    </main>
+ 
+    <!-- Pied de page -->
+    <footer>
+      <!-- Section du pied de page -->
+      <section id="pied2page">
+        <div class="colonne">
+          <!-- Liste de liens (FAQ, Politiques, Conditions) -->
+          <dl>
+            <dd><a href="#">Foire aux questions</a></dd>
+            <dd><a href="#">Politiques de confidentialité</a></dd>
+            <dd><a href="#">Conditions de ventes</a></dd>
+          </dl>
+          <!-- Coordonnées (Téléphone, Courriel, Adresse) -->
+          <dl>
+            <dd><a href="#">Téléphone : (514) 862-2769 </a></dd>
+            <dd><a href="#">Courriel : info@crowtrainingcenter.com</a></dd>
+            <dd>
+              <a href="#">4850 rue St-Ambroise #107, Montreal, Qc, H4C 3N8</a>
+            </dd>
+          </dl>
+          <!-- Liens supplémentaires (Équipe, Emplois, Contact) -->
+          <dl>
+            <dd><a href="#"> L'équipe </a></dd>
+            <dd><a href="#"> Emplois </a></dd>
+            <dd><a href="#">Contact</a></dd>
+          </dl>
+        </div>
+        <!-- Mention de droits d'auteur -->
+        <p>
+          Tous droits réservés - Minji Ardanuy-Jetté et Alexander Rankov ©2023
+        </p>
+      </section>
+    </footer>
+ 
+    <!-- Script JavaScript externe -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+:root{
+    --police-principal: 'Lato';
+    --police-titre: 'Gord Quick';
+    --couleur-header: #8a0303;
+    --couleur-arriere-plan-formulaire: #ff6b6b;
+    --couleur-arriere-plan-input:#e74c3c;
+    --couleur-etoile-mode-checked: #ff9f43;
+    --couleur-du-texte: rgb(18, 18, 18);
+    --couleur-footer: black;
+    --couleur-arriere-plan-fleche: #333;
+    --couleur-arriere-plan-fleche-foncee: #555;
+    --couleur-arriere-plan-fleche-encore-plus-foncee: #777;
+    --couleur-blanche: #fff;
+    --couleur-arriere-plan-produits: #f2f2f2;
+    --couleur-arriere-plan: #ecf0f1;
+}
+
+@font-face {
+    font-family: 'Gord Quick';
+    src: url("../polices/GordQucik-Black.otf");
+}

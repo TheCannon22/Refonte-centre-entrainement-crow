@@ -1,0 +1,149 @@
+/* Importation de la feuille de style root.css */
+@import url(root.css);
+ 
+/* Réinitialisation des marges, paddings, et modèle de boîte */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+/* Styles de base pour le document HTML */
+html {
+  width: 100vw;
+  height: 100vh;
+  font-size: clamp(14px, 0.5rem + 1vw, 18px);
+  scroll-behavior: smooth;
+}
+ 
+/* Styles de base pour le corps du document */
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  color: #333;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+ 
+/* Styles pour l'en-tête de la page */
+header {
+  min-height: 10vh;
+}
+ 
+/* Styles pour la section principale du contenu */
+main.contenu {
+  min-height: 70vh;
+  pointer-events: none;
+  position: relative;
+}
+ 
+/* Styles spécifiques pour les paragraphes dans la section principale */
+main.contenu p {
+  padding: 20px;
+}
+ 
+/* Styles pour les sections de la page */
+main.contenu section {
+  min-width: 100%;
+  background-color: var(--couleur-arriere-plan);
+}
+ 
+/* Styles pour la vidéo d'introduction */
+#videoIntro {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+ 
+/* Styles spécifiques pour la section 1 */
+#section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ 
+/* Styles spécifiques pour la section 2 */
+#section2 {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: -1;
+}
+ 
+/* Styles spécifiques pour la section 2 - mission */
+#section2 #mission {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+ 
+/* Styles pour le titre de la mission dans la section 2 */
+#section2 #mission h2 {
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  background-color: #ff0000;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+ 
+/* Styles pour la disposition en absolu de l'élément aside dans la section 2 */
+#section2 aside {
+  position: absolute;
+  z-index: 0;
+}
+ 
+/* Styles pour l'image dans la section 2 */
+#section2 img {
+  width: 350px;
+  height: auto;
+}
+ 
+/* Styles spécifiques pour les paragraphes de la mission dans la section 2 */
+#section2 #mission p {
+  color: black;
+  font-size: 1rem;
+  background-color: rgba(255, 123, 123, 0.6);
+}
+ 
+/* Media queries pour les écrans de taille supérieure à 768px */
+@media screen and (min-width: 768px) {
+  /* Ajustements spécifiques pour la section 2 */
+  #section2 {
+    justify-content: space-between;
+    z-index: 0;
+  }
+ 
+  /* Ajustements spécifiques pour la mission dans la section 2 */
+  #section2 #mission {
+    z-index: 0;
+  }
+ 
+  /* Ajustements spécifiques pour l'élément aside dans la section 2 */
+  #section2 aside {
+    left: 15px;
+    bottom: 0;
+  }
+ 
+  /* Ajustements spécifiques pour l'image dans la section 2 */
+  #section2 img {
+    width: 700px;
+  }
+ 
+  /* Ajustements spécifiques pour la mission dans la section 2 en mode tablette/desktop */
+  #section2 #mission {
+    position: absolute;
+    right: 20px;
+    width: 900px;
+  }
+}

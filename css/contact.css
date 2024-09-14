@@ -1,0 +1,181 @@
+/* Import de la feuille de style root.css */
+@import url(root.css);
+
+/* Réinitialisation des marges, le padding et du comportement de défilement. On met un smooth-scrolling sur toute la page */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/***************************************************** ZONE DU BODY *********************************************/
+
+/* Style du body complet de la page */
+body {
+  /* la police de caractère */
+  font-family: var(--police-principal);
+  /* Les couleurs principales */
+  background-color: var(--couleur-arriere-plan);
+  color: var(--couleur-du-texte);
+  /* Les éléments nécessaires pour mettre la page centrée */
+  margin: 0;
+  padding: 0;
+  /* Les mesures du body en entier */
+  width: 100%;
+  height: 100vh;
+}
+
+/***************************************************** ZONE DU HEADER *********************************************/
+
+/* Style de l'en-tête */
+header {
+  height: 12vh;
+}
+
+/***************************************************** ZONE DES TITRES H1 À H6 *********************************************/
+
+/* Style des titres h1 */
+h1 {
+  font-family: var(--police-titre);
+}
+
+/* Style des titres h1 et h2 */
+h1, h2 {
+  text-align: center;
+  color: var(--couleur-du-texte);
+}
+
+/***************************************************** ZONE DU FORMULAIRE *********************************************/
+
+/* Style du contenu dans le main de toute la page */
+.contenu {
+  /* On met en display flex, on met tout en colonne et on centre tous les éléments */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* L'hauteur minimale et le padding autour de celui-ci */
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Style du formulaire qui englobe tout le formulaire */
+.formulaire {
+  /* arrière-plan rouge pâle avec une ombre en arrière-plan*/
+  background-color: var(--couleur-arriere-plan-formulaire);
+  box-shadow: 0 0 10px rgba(236, 240, 241, 0.1);
+  /* Les padding et margins nécessaires */
+  padding: 20px;
+  margin-bottom: 20px; 
+  /* Taille et dimension du formulaire en soi */
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Style du formulaire avec un affichage en colonne */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style du champ de formulaire avec une bordure, un padding et une bordure arrondie noire*/
+fieldset {
+  margin-bottom: 20px;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Style de la légende du champ de formulaire */
+legend {
+  font-weight: bold;
+  color: var(--couleur-du-texte);
+}
+
+/* Style des étiquettes du formulaire avec une marge inférieure */
+label {
+  margin-bottom: 8px;
+  color: var(--couleur-du-texte);
+}
+
+/* Style des input */
+input {
+  /* Le padding et le margin */
+  padding: 10px;
+  margin-bottom: 15px;
+  /* les caractéristiques des bordures */
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  /* Les couleurs principales */
+  background-color: var(--couleur-blanche);
+  color: var(--couleur-du-texte);
+}
+
+/* Style des boutons de soumission et de réinitialisation */
+input[type="submit"],
+input[type="reset"] {
+  /* Couleurs principales */
+  background-color: var(--couleur-arriere-plan-input);
+  color: var(--couleur-arriere-plan);
+  /* un padding */
+  padding: 10px;
+  /* Description de la bordure */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Changement de style au survol des boutons */
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: var(--couleur-du-texte)
+}
+
+/***************************************************** ZONE DE LA CARTE GOOGLE MAPS *********************************************/
+
+/* Style des cartes avec un rembourrage de 20px */
+.carte {
+  padding: 20px;
+}
+
+/* Style des iframes à l'intérieur des cartes */
+.carte iframe {
+  width: 360px;
+  height: 400px;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+
+/* Styles spécifiques à l'écran pour les écrans d'au moins 768px de largeur */
+@media screen and (min-width: 768px) {
+  /* Modification de la taille du titre h1 */
+  h1 {
+    font-size: 40px;
+  }
+
+  /* Ajustement de la largeur du formulaire */
+  .formulaire {
+    width: 80%;
+    max-width: 600px;
+  }
+
+  /* Modification de l'agencement du contenu en ligne avec un espacement égal entre les éléments */
+  .contenu {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  /* Ajustement de la largeur du conteneur du formulaire */
+  .conteneur-formulaire {
+    width: 20vw;
+  }
+
+  /* Ajustement de la taille de l'iframe à l'intérieur de la carte */
+  .carte iframe {
+    width: 500px;
+    height: 716px;
+  }
+}

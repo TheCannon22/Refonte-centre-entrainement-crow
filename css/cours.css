@@ -1,0 +1,183 @@
+/* Import de la feuille de style root.css */
+@import url(root.css);
+
+/* Réinitialisation des marges, le padding, du comportement de défilement et de la boîte */
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+/*********************************************************************** ZONE DU BODY **********************************************************/
+
+/* Style du corps de la page */
+body {
+    font-family: var(--police-principal);
+    background-color: var(--couleur-arriere-plan);
+}
+
+/*********************************************************************** ZONE DES TITRES H1 À H6 **********************************************************/
+/* Style des titres h2 */
+h2 {
+    text-align: center;
+    font-family: var(--police-titre);
+}
+
+/*********************************************************************** ZONE DU CONTENU PRINCIPAL DES COURS **********************************************************/
+
+/* Style du contenu principal avec une marge en haut et un rembourrage */
+main.contenu {
+    margin-top: 10vh;
+    padding: 20px;
+}
+
+/* Style du conteneur des cours */
+main .cours-container {
+    /* Les mettre en display flex, les mettre en space-around et les mettre en flex-wrap */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Style des cours */
+main .cours {
+    /* Dimension des cours */
+    width: 30%;
+    /* Margin */
+    margin: 20px 0;
+    /* On cache le contenu */
+    overflow: hidden;
+    /* Caractéristiques de la couleur et de la boite */
+    background: var(--couleur-blanche);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Caractéristiques des transitions */
+    transform-origin: center bottom;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Style des images des cours*/
+main .cours img {
+    /* Dimensions de l'image */
+    width: 100%;
+    max-height: 150px;
+    /* Le mettre en mode cover */
+    object-fit: cover;
+    /* Description du border */
+    border-bottom: 2px solid #ddd;
+    /* Transition */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Transformation de l'image au survol du cours */
+main .cours:hover img {
+    transform: scale(1.1);
+}
+
+/* Style des titres des cours*/
+main .cours h3 {
+    font-size: 16px;
+    margin: 15px 0;
+    color: var(--couleur-du-texte);
+    transition: color 0.3s ease-in-out;
+}
+
+/* Changement de couleur au survol du cours */
+main .cours:hover h3 {
+    color: var(--couleur-du-texte);
+}
+
+/* Style des paragraphes des cours */
+main .cours p {
+    font-size: 16px;
+    padding: 0 15px;
+}
+
+/* Style des liens "En savoir plus"*/
+main .cours a {
+    /* Le mettre en display block */
+    display: block;
+    /* Les couleurs */
+    background: var(--couleur-header);
+    color: var(--couleur-blanche);
+    /* padding */
+    padding: 10px;
+    /* pas de décorations sur le texte et le font-weight est à bold */
+    text-decoration: none;
+    font-weight: bold;
+    /* transition */
+    transition: background 0.3s ease-in-out;
+}
+
+/* Changement de fond au survol du lien "En savoir plus" */
+main .cours a:hover {
+    background: var(--couleur-du-texte);
+}
+
+/*********************************************************************** ZONE DES ANIMATIONS**********************************************************/
+
+/* Animation de rebondissement au survol des cours */
+main .cours:hover {
+    animation: bounce 0.5s ease infinite alternate;
+}
+
+/* Styles pour aligner le lien "En savoir plus" à droite du cours */
+.cours {
+    /* position relative */
+    position: relative;
+}
+
+/* la classe en-savoir-plus */
+.en-savoir-plus {
+    /* position absolute */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* Animation de rebondissement */
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+
+/* Media queries pour les écrans de taille maximale de 767px (mobile-first) */
+@media screen and (max-width: 767px) {
+    /* Modification de l'agencement des cours en colonne centrée avec des marges */
+    main .cours-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 10px;
+    }
+
+    /* Ajustement de la largeur des cours à 100% */
+    main .cours {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
+
+/* Media queries pour les écrans de taille minimale de 768px (desktop) */
+@media screen and (min-width: 768px) {
+    /* Ajustement de l'espacement des cours autour de l'axe vertical */
+    main .cours-container {
+        justify-content: space-around;
+    }
+
+    /* Ajustement de la largeur des cours à 30% */
+    main .cours {
+        width: 30%;
+        margin: 20px 0;
+    }
+
+    /* Ajustement de la taille de la police des titres des cours */
+    main .cours h3 {
+        font-size: 28px;
+    }
+}
